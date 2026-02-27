@@ -15,7 +15,7 @@ const nextApp = next({ dev });
 const handle = nextApp.getRequestHandler();
 const server = express();
 
-const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URI = process.env.NEXT_PUBLIC_MONGODB_URI;
 if (!MONGO_URI) {
   throw new Error("MONGO_URI is required. Set it in .env.local or environment variables.");
 }
